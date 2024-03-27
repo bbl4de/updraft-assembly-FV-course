@@ -1,0 +1,10 @@
+// 60008060093d393df3 -> contract creation bytecode  
+// "0x01" would automatically be converted to PUSH1 0x01
+
+
+#define macro MAIN() = takes(0) returns(0) {
+    0x00 // [0]
+    calldataload // [calldata(32)] => zero is automatically popped off
+    0xe0 // 224 number of bits to shift using shr [0xe0, calldata(32)]
+    shr // 
+}
